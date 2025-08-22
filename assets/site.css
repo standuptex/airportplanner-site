@@ -1,0 +1,30 @@
+/* /assets/site.css — shared theme for Airport Planner site */
+:root{
+  --accent:#0A9ED9;
+  --accentDark:#087FB0;
+  --mint:#50E3C2;
+  --lagoon:#4FC3F7;
+  --sun:#FFD76E;
+  --ink:#0F172A;
+  --inkSoft:#334155;
+  --paper:#FFFFFF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:linear-gradient(135deg,#E6FAFF 0%,#F9FFFB 100%);line-height:1.6}
+a{color:var(--accentDark);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:40px;height:40px;border-radius:8px}
+.brand h1{font-size:20px;margin:0}
+.tag{background:rgba(255,215,110,.4);color:#5c4800;padding:4px 10px;border-radius:999px;font-weight:700;font-size:12px}
+nav a{margin-left:16px;font-weight:600}
+.card{background:var(--paper);border:1px solid rgba(15,23,42,.06);border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(15,23,42,.06);margin-top:24px}
+footer{margin:36px 0 24px;color:var(--inkSoft);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;border:1px solid transparent;font-weight:700}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accentDark)}
+.btn-ghost{background:#fff;color:var(--accentDark);border-color:rgba(15,23,42,.08)}
+.note{background:#FFF7E0;border:1px solid #F5E6A7;padding:10px 12px;border-radius:10px;display:inline-block}
+@media (max-width:640px){.hero{padding:28px}.hero h2{font-size:30px}}
