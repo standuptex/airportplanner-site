@@ -10,9 +10,16 @@
   --paper:#FFFFFF;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:linear-gradient(135deg,#E6FAFF 0%,#F9FFFB 100%);line-height:1.6}
+html,body{
+  margin:0;padding:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--ink);
+  background:linear-gradient(135deg,#E6FAFF 0%,#F9FFFB 100%);
+  line-height:1.6
+}
 a{color:var(--accentDark);text-decoration:none}
 a:hover{text-decoration:underline}
+
 .wrap{max-width:980px;margin:0 auto;padding:20px}
 header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
 .brand{display:flex;align-items:center;gap:12px}
@@ -20,34 +27,68 @@ header{display:flex;align-items:center;justify-content:space-between;padding:16p
 .brand h1{font-size:20px;margin:0}
 .tag{background:rgba(255,215,110,.4);color:#5c4800;padding:4px 10px;border-radius:999px;font-weight:700;font-size:12px}
 nav a{margin-left:16px;font-weight:600}
-.card{background:var(--paper);border:1px solid rgba(15,23,42,.06);border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(15,23,42,.06);margin-top:24px}
-footer{margin:36px 0 24px;color:var(--inkSoft);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
+.card{
+  background:var(--paper);
+  border:1px solid rgba(15,23,42,.06);
+  border-radius:14px;
+  padding:24px;
+  box-shadow:0 10px 30px rgba(15,23,42,.06);
+  margin-top:24px
+}
+
+footer{
+  margin:36px 0 24px;
+  color:var(--inkSoft);
+  font-size:14px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px
+}
+
+/* Buttons */
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;border:1px solid transparent;font-weight:700}
 .btn-primary{background:var(--accent);color:#fff}
 .btn-primary:hover{background:var(--accentDark)}
 .btn-ghost{background:#fff;color:var(--accentDark);border-color:rgba(15,23,42,.08)}
 
+/* Notes */
 .note{background:#FFF7E0;border:1px solid #F5E6A7;padding:10px 12px;border-radius:10px;display:inline-block}
 
-/* NEW: make the CTA row align the badge and the button perfectly */
+/* CTA row */
 .cta{
   display:flex;
-  align-items:center;      /* vertical alignment */
+  align-items:center;
   gap:12px;
   flex-wrap:wrap;
 }
 
-/* NEW: consistent sizing for App Store badge */
+/* App Store badge */
 .appstore-badge{
   display:inline-block;
-  line-height:0;          /* avoid extra whitespace */
+  line-height:0;
 }
 .appstore-badge img{
-  height:44px;            /* match visual height of your ghost button */
+  height:40px;   /* Reference height */
   width:auto;
 }
 
+/* Contact Support button to match badge height */
+.btn-support{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:40px;          /* match badge */
+  padding:0 16px;       /* only horizontal padding */
+  font-weight:600;
+  font-size:14px;
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,0.1);
+  background:#fff;
+  color:var(--accentDark);
+  box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+.btn-support:hover{background:#f8f8f8}
+
+/* Responsive */
 @media (max-width:640px){
   .hero{padding:28px}
   .hero h2{font-size:30px}
